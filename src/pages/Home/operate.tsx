@@ -1,7 +1,7 @@
 const DesignPhilosophy = () => {
   return (
     <div className="bg-g[#FFFFFF]">
-      <section className="px-6 lg:px-[80px] py-[40px] lg:py-[60px]">
+      <section className="px-6 lg:px-[80px] py-[40px] lg:pt-[60px] lg:pb-[70px]">
         {/* Header */}
         <div className="mb-16 lg:mb-[40px]">
           <p className="text-[12px] lg:text-[12px] font-medium tracking-wider uppercase mb-4 lg:mb-[10px]">
@@ -18,13 +18,14 @@ const DesignPhilosophy = () => {
           {/* Column 1: Discover */}
           <div className="space-y-[11px] lg:space-y-[11px]">
             <div
-              className="text-[48px] lg:text-[48px] font-[manrope] lg:leading-normal font-medium leading-none"
+              className="text-[48px] lg:text-[48px] font-[manrope] lg:leading-normal font-semibold leading-none inline-block"
               style={{
                 WebkitTextStroke: "1px #3B241E",
                 color: "transparent",
+              
               }}
             >
-              01
+              <p className="inline-block">01</p>
             </div>
             <h2 className="text-[14px] lg:text-[16px] lg:leading-normal font-medium font-[manrope]">
               Discover
@@ -39,13 +40,14 @@ const DesignPhilosophy = () => {
           {/* Column 2: Design */}
           <div className="space-y-[11px] lg:space-y-[11px]">
             <div
-              className="text-[48px] lg:text-[48px] font-[manrope] lg:leading-normal font-medium leading-none"
+              className="text-[48px] lg:text-[48px] font-[inter] lg:leading-normal font-semibold leading-none"
               style={{
                 WebkitTextStroke: "1px #3B241E",
                 color: "transparent",
+                display: "inline-block",
               }}
             >
-              02
+              <p className="text-[48px] lg:text-[48px] font-[inter] lg:leading-normal font-medium leading-none inline-block">02</p>
             </div>
             <h2 className="text-[14px] lg:text-[16px] lg:leading-normal font-medium font-[manrope]">
               Design
@@ -60,13 +62,14 @@ const DesignPhilosophy = () => {
           {/* Column 3: Deliver */}
           <div className="space-y-[11px] lg:space-y-[11px]">
             <div
-              className="text-[48px] lg:text-[48px] font-[manrope] lg:leading-normal font-medium leading-none"
+              className="text-[48px] lg:text-[48px] font-[inter] lg:leading-normal font-medium leading-none"
               style={{
                 WebkitTextStroke: "1px #3B241E",
                 color: "transparent",
+                display: "inline-block",
               }}
             >
-              03
+              <p className="text-[48px] lg:text-[48px] font-[inter] lg:leading-normal font-medium leading-none inline-block">03</p>
             </div>
             <h2 className="text-[14px] lg:text-[16px] lg:leading-normal font-medium font-[manrope]">
               Deliver

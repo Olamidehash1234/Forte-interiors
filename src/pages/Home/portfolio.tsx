@@ -28,7 +28,9 @@ const Portfolio = () => {
       if (!video) return;
 
       const play = () => {
-        video.play().catch((err) => console.warn("Autoplay failed:", err.message));
+        video
+          .play()
+          .catch((err) => console.warn("Autoplay failed:", err.message));
       };
 
       const pause = () => {
@@ -84,7 +86,9 @@ const Portfolio = () => {
                 Project ADECO
               </h2>
               <p className="text-white text-center max-w-xs mb-6 text-[12px] font-light lg:leading-normal">
-                We transformed an open-plan layout into a sleek workspace with acoustic paneling, ergonomic furniture, and custom glass partitions.
+                We transformed an open-plan layout into a sleek workspace with
+                acoustic paneling, ergonomic furniture, and custom glass
+                partitions.
               </p>
               <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
                 VIEW OFFICE SPACE
@@ -93,9 +97,11 @@ const Portfolio = () => {
           </div>
 
           <div className="flex text-center lg:justify-end">
-            <button className="mt-6 flex lg:w-auto text-center lg:mt-0 border border-[#3B241E] px-[36px] py-[12px] text-[14px] hover:text-[#3B221D] transition duration-300">
-              View all portfolios
-            </button>
+            <a href="/portfolio">
+              <button className="mt-6 flex lg:w-auto text-center lg:mt-0 border border-[#3B241E] px-[36px] py-[12px] text-[14px] hover:bg-[#3B241E] hover:text-white transition duration-300">
+                View all portfolios
+              </button>
+            </a>
           </div>
         </div>
 
@@ -124,7 +130,8 @@ const Portfolio = () => {
               Project Case
             </h2>
             <p className="text-white text-center max-w-[350px] mb-6 text-[14px] font-light">
-              A modern yet cozy family home in Ikoyi featuring warm wood tones, open floor plans, and customized wardrobe fittings.
+              A modern yet cozy family home in Ikoyi featuring warm wood tones,
+              open floor plans, and customized wardrobe fittings.
             </p>
             <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
               VIEW RESIDENTIAL SPACE
@@ -135,7 +142,10 @@ const Portfolio = () => {
         {/* Second + Third Videos */}
         <div className="order-2 lg:order-2 flex flex-col gap-[25px] lg:w-[29%] w-full">
           {[1, 2].map((i) => (
-            <div key={i} className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden">
+            <div
+              key={i}
+              className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden"
+            >
               <video
                 ref={videoRefs[i]}
                 src="/videos/about-vid.mp4"
@@ -158,8 +168,11 @@ const Portfolio = () => {
                 <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
                   Project LUXE
                 </h2>
+
                 <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-                  {i === 2 ? "VIEW RESIDENTIAL SPACE" : "VIEW RESIDENTIAL SPACE"}
+                  {i === 2
+                    ? "VIEW RESIDENTIAL SPACE"
+                    : "VIEW RESIDENTIAL SPACE"}
                 </button>
               </div>
             </div>

@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
+      <div className="absolute inset-0  bg-black/60" />
 
       {/* Content */}
       <div

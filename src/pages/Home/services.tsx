@@ -8,7 +8,7 @@ export default function OurServices() {
         className="absolute inset-0 bg-no-repeat bg-center z-0"
         style={{
           backgroundImage: `url('/icons/home/service-bg.svg')`,
-          mixBlendMode: 'hard-light',
+          mixBlendMode: "hard-light",
         }}
       ></div>
 
@@ -39,27 +39,30 @@ export default function OurServices() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           {[
             {
-              src: '/home/service-img.png',
-              title: 'Residential Interiors',
-              desc: 'Tailored designs that reflect your lifestyle and personality.',
+              src: "/home/service-img.png",
+              title: "Residential Interiors",
+              desc: "Tailored designs that reflect your lifestyle and personality.",
             },
             {
-              src: '/home/service-img1.png',
-              title: 'Commercial Spaces',
-              desc: 'Functional yet stylish designs for productive environments.',
+              src: "/home/service-img1.png",
+              title: "Commercial Spaces",
+              desc: "Functional yet stylish designs for productive environments.",
             },
             {
-              src: '/home/service-img2.png',
-              title: 'Space Planning',
-              desc: 'strategic layouts that combine aesthetics with usability.',
+              src: "/home/service-img2.png",
+              title: "Space Planning",
+              desc: "strategic layouts that combine aesthetics with usability.",
             },
             {
-              src: '/home/service-img3.png',
-              title: 'Consultation & Styling',
-              desc: 'Expert guidance to bring your vision to life',
+              src: "/home/service-img3.png",
+              title: "Consultation & Styling",
+              desc: "Expert guidance to bring your vision to life",
             },
           ].map((item, index) => (
-            <div key={index} className="relative cursor-pointer w-full overflow-hidden group">
+            <div
+              key={index}
+              className="relative cursor-pointer w-full overflow-hidden group"
+            >
               {/* Image */}
               <img
                 src={item.src}
@@ -72,7 +75,9 @@ export default function OurServices() {
 
               {/* Text Block */}
               <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-10">
-                <h3 className="text-[20px] font-medium mb-[8px]">{item.title}</h3>
+                <h3 className="text-[20px] font-medium mb-[8px]">
+                  {item.title}
+                </h3>
                 <p className="text-[13px] text-white/90">{item.desc}</p>
               </div>
             </div>
@@ -80,9 +85,11 @@ export default function OurServices() {
         </div>
 
         {/* Button */}
-        <button className="mt-6 border border-white px-[36px] py-[12px] lg: hover:bg-white hover:text-[#3B221D] text-[14px] transition duration-300">
-          View All Services
-        </button>
+        <a href="/services">
+          <button className="mt-6 border border-white px-[36px] py-[12px] lg: hover:bg-white hover:text-[#3B221D] text-[14px] transition duration-300">
+            View All Services
+          </button>
+        </a>
       </div>
     </section>
   );
