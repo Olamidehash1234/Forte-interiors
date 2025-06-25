@@ -73,7 +73,7 @@ const Portfolio = () => {
             <video
               ref={videoRefs[3]}
               src="/videos/about-vid.mp4"
-              poster="/home/port-img4.png"
+              poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854727/port-img4_glchap.png"
               className="w-full h-full object-cover transition-all duration-300 ease-in-out"
               playsInline
               loop
@@ -110,7 +110,7 @@ const Portfolio = () => {
           <video
             ref={videoRefs[0]}
             src="/videos/about-vid.mp4"
-            poster="/home/port-img1.png"
+            poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854727/port-img1_glp6xq.png"
             className="h-full w-full object-cover transition-all duration-300 ease-in-out"
             playsInline
             loop
@@ -141,42 +141,62 @@ const Portfolio = () => {
 
         {/* Second + Third Videos */}
         <div className="order-2 lg:order-2 flex flex-col gap-[25px] lg:w-[29%] w-full">
-          {[1, 2].map((i) => (
-            <div
-              key={i}
-              className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden"
+          {/* Second Video */}
+          <div className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden">
+            <video
+              ref={videoRefs[1]}
+              src="/videos/about-vid.mp4"
+              poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854725/port-img2_fcmdmw.png"
+              className="w-full h-full object-cover transition-all duration-300 ease-in-out"
+              playsInline
+              loop
+              muted={isMuted[1]}
+              controls={false}
+              preload="metadata"
+            />
+            <button
+              onClick={() => toggleMute(1)}
+              className="absolute top-4 right-4 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full"
             >
-              <video
-                ref={videoRefs[i]}
-                src="/videos/about-vid.mp4"
-                poster={`/home/port-img${i + 1}.png`}
-                className="w-full h-full object-cover transition-all duration-300 ease-in-out"
-                playsInline
-                loop
-                muted={isMuted[i]}
-                controls={false}
-                preload="metadata"
-              />
-              <button
-                onClick={() => toggleMute(i)}
-                className="absolute top-4 right-4 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full"
-              >
-                {isMuted[i] ? <FaVolumeMute /> : <FaVolumeUp />}
+              {isMuted[1] ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
+            <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
+              <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
+                Project LUXE
+              </h2>
+              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                VIEW RESIDENTIAL SPACE
               </button>
-
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
-                <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
-                  Project LUXE
-                </h2>
-
-                <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-                  {i === 2
-                    ? "VIEW RESIDENTIAL SPACE"
-                    : "VIEW RESIDENTIAL SPACE"}
-                </button>
-              </div>
             </div>
-          ))}
+          </div>
+          {/* Third Video */}
+          <div className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden">
+            <video
+              ref={videoRefs[2]}
+              src="/videos/about-vid.mp4"
+              poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854726/port-img3_xr1roh.png"
+              className="w-full h-full object-cover transition-all duration-300 ease-in-out"
+              playsInline
+              loop
+              muted={isMuted[2]}
+              controls={false}
+              preload="metadata"
+            />
+            <button
+              onClick={() => toggleMute(2)}
+              className="absolute top-4 right-4 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full"
+            >
+              {isMuted[2] ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
+            <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
+              <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
+                Project LUXE
+              </h2>
+              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                VIEW RESIDENTIAL SPACE
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

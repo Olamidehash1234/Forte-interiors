@@ -131,7 +131,7 @@ const FAQ = () => {
             {/* Bottom Image */}
             <div className="aspect-[4/3] lg:h-[440px] bg-gray-800">
               <img
-                src="/home/faq-img1.png"
+                src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750855266/faq-img1_ymjirb.png"
                 alt="Modern conference room with wooden table"
                 className="w-full h-full object-cover"
               />

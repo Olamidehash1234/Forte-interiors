@@ -37,7 +37,7 @@ const CoreValuesSection = () => {
                 <div key={index} className="space-y-[11px]">
                   {/* Number */}
                   <div
-                    className="text-6xl font-[Manrope] lg:text-[48px] font-light text-amber-800 opacity-60 leading-normal"
+                    className="text-6xl font-[Manrope] font-medium lg:text-[48px] font-light text-amber-800 opacity-60 leading-normal"
                     style={{
                       WebkitTextStroke: "0.5px #FFFFFF73",
                       color: "transparent",

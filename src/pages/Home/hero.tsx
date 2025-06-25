@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 
 const slides = [
-  "/home/hero-img.png",
-  "/home/hero-img2.png",
-  "/home/hero-img3.png",
-  "/home/hero-img4.png",
+  "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854086/hero-img_yoy7gp.png",
+  "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854082/hero-img2_tdrfa9.png",
+  "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854079/hero-img3_nwsoct.png",
+  "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854079/hero-img4_n1drld.png",
 
 ];
 

@@ -16,7 +16,7 @@ const InsightsHero: React.FC = () => {
       {/* Featured Blog Section */}
       <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden">
         <img
-          src="/blog/hero-img.png" // Replace with your actual image
+          src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860700/hero-img_kg546l.png" // Replace with your actual image
           alt="Studio blog banner"
           className="w-full h-full object-cover"
         />

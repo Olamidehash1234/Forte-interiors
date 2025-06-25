@@ -13,7 +13,7 @@ const ConsultationHero = () => {
             className="w-full h-full flex items-center justify-center"
             style={{
               minHeight: "300px",
-              backgroundImage: "url('/home/faq-img.png')",
+              backgroundImage: "url('https://res.cloudinary.com/dzwv3fba5/image/upload/v1750855309/faq-img_x22njf.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

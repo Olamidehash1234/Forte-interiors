@@ -22,7 +22,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img1.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860131/img1_z4eq1q.png"
               alt="Modern residential living room with beige sectional sofa, artwork, and contemporary furniture"
               className="w-full h-auto object-cover"
             />
@@ -49,7 +49,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img2.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860160/img2_rrdaql.png"
               alt="Professional conference room with dark chairs, wooden table, and wall-mounted screen"
               className="w-full h-auto object-cover"
             />
@@ -76,7 +76,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img3.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860162/img3_unswld.png"
               alt="Modern residential living room with beige sectional sofa, artwork, and contemporary furniture"
               className="w-full h-auto object-cover"
             />
@@ -114,7 +114,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img4.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860193/img4_y0tzi6.png"
               alt="Professional conference room with dark chairs, wooden table, and wall-mounted screen"
               className="w-full h-auto object-cover"
             />
@@ -158,7 +158,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img5.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860181/img5_mneyez.png"
               alt="Modern residential living room with beige sectional sofa, artwork, and contemporary furniture"
               className="w-full h-auto object-cover"
             />
@@ -198,7 +198,7 @@ const InteriorDesignShowcase = () => {
           {/* Image */}
           <div className="w-full">
             <img
-              src="/services/img6.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860259/img6_gywgp8.png"
               alt="Professional conference room with dark chairs, wooden table, and wall-mounted screen"
               className="w-full h-auto object-cover"
             />

@@ -7,12 +7,10 @@ const MeetTheCEO = () => {
           <div className="order-1 lg:order-2">
             <div className="relative">
               <img
-                src="/about/ceo-img.png"
+                src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856088/ceo-img_dz4x8r.png"
                 alt="Funke Olude, CEO of Fort Interiors"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
               />
-              {/* Decorative plant element */}
-              <div className="absolute bottom-4 right-4 w-16 h-20 bg-green-600 rounded-t-full opacity-20"></div>
             </div>
           </div>
 

@@ -8,43 +8,43 @@ const RecentArticles = () => {
       id: 1,
       title: "The Power of Wall Finishes in Modern Interiors",
       date: "May 2025",
-      image: "/blog/art1.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860783/art1_q4pfnq.png"
     },
     {
       id: 2,
       title: "How to Choose the Right Furniture for Small Spaces",
       date: "June 2025",
-      image: "/blog/art2.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860792/art2_k3icw6.png"
     },
     {
       id: 3,
       title: "5 Tips for a Budget-Friendly Office Redesign",
       date: "July 2025",
-      image: "/blog/art3.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860785/art3_er5xvo.png"
     },
     {
       id: 4,
       title: "The Power of Wall Finishes in Modern Interiors",
       date: "May 2025",
-      image: "/blog/art4.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860783/art1_q4pfnq.png"
     },
     {
       id: 5,
       title: "How to Choose the Right Furniture for Small Spaces",
       date: "June 2025",
-      image: "/blog/art5.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750861123/art5_eid4tq.png"
     },
     {
       id: 6,
       title: "5 Tips for a Budget-Friendly Office Redesign",
       date: "July 2025",
-      image: "/blog/art6.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860790/art6_lwdz3q.png"
     },
     {
       id: 7,
       title: "Creating Functional Workspace Design",
       date: "August 2025",
-      image: "/blog/art6.png"
+      image: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750860790/art6_lwdz3q.png"
     }
   ];
 

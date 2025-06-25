@@ -36,17 +36,17 @@ const AboutSection: React.FC = () => {
           {/* Small Images */}
           <div className="grid grid-cols-3 gap-4 lg:gap-[30px] pt-2">
             <img
-              src="/home/who-img2.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854296/who-img2_dwkjdn.png"
               alt="Project 1"
               className="w-full h-auto lg:h-[200px] object-cover"
             />
             <img
-              src="/home/who-img3.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854298/who-img3_lygmdi.png"
               alt="Project 2"
               className="w-full h-auto lg:h-[200px] object-cover"
             />
             <img
-              src="/home/who-img4.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854298/who-img4_hxcvfy.png"
               alt="Project 3"
               className="w-full h-auto lg:h-[200px] object-cover"
             />
@@ -63,7 +63,7 @@ const AboutSection: React.FC = () => {
         {/* Right Side Image */}
         <div>
           <img
-            src="/home/who-img.png"
+            src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854299/who-img_huhz2w.png"
             alt="About Fort Interiors"
             className="w-full h-[250px] lg:h-[590px] object-cover rounded-sm"
           />

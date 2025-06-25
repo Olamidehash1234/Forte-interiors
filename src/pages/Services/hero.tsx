@@ -5,7 +5,7 @@ const AboutUsHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/services/hero-img.png')"
+          backgroundImage: "url('https://res.cloudinary.com/dzwv3fba5/image/upload/v1750858799/hero-img_mi7lmp.png')"
         }}
       >
         {/* Overlay */}

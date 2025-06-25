@@ -83,7 +83,7 @@ const Testimonials = () => {
         <div className="order-first lg:order-last w-full lg:w-3/5 flex items-center">
           <div className="aspect-[4/3] lg:h-[400px] lg:w-full overflow-hidden bg-gray-200">
             <img
-              src="/home/testimonial-img.png"
+              src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750855120/testimonial-img_f8rqyj.png"
               alt="Modern living room with stairs and dining area"
               className="w-full h-full object-cover"
             />

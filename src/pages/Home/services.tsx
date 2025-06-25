@@ -39,22 +39,22 @@ export default function OurServices() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           {[
             {
-              src: "/home/service-img.png",
+              src: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854532/service-img_yryu43.png",
               title: "Residential Interiors",
               desc: "Tailored designs that reflect your lifestyle and personality.",
             },
             {
-              src: "/home/service-img1.png",
+              src: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854532/service-img1_e7lmwy.png",
               title: "Commercial Spaces",
               desc: "Functional yet stylish designs for productive environments.",
             },
             {
-              src: "/home/service-img2.png",
+              src: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854531/service-img2_yjyim5.png",
               title: "Space Planning",
               desc: "strategic layouts that combine aesthetics with usability.",
             },
             {
-              src: "/home/service-img3.png",
+              src: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854531/service-img3_igus5o.png",
               title: "Consultation & Styling",
               desc: "Expert guidance to bring your vision to life",
             },

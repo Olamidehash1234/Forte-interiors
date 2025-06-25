@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
       {/* Right side - Image */}
       <div className="relative inset-0 w-full lg:block lg:w-1/2 h-[500px] lg:h-[880px]">
         <img
-          src="/contact/contact-img.png"
+          src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750861232/contact-img_ovb4ix.png"
           alt="Interior"
           className="w-full h-full object-cover"
         />

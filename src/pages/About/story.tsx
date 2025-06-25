@@ -46,7 +46,7 @@ const OurStorySection = () => {
           {/* Image Section */}
           <div className="relative">
             <video
-              src="/videos/about-vid.mp4"
+              src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750855628/about-vid_v7e4nd.mp4"
               poster="/about/sec2-img.png"
               autoPlay
               loop

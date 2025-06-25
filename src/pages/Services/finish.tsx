@@ -72,7 +72,7 @@ const WallFinishComponent = () => {
         {/* Right section - Image */}
         <div className="relative">
           <img
-            src="/services/finish-img.png"
+            src="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750858942/finish-img_izsr8t.png"
             alt="Interior wall finish showcasing artistic wall treatment with contemporary design elements"
             className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
           />
