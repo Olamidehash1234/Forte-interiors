@@ -1,13 +1,13 @@
-import Hero from "./hero";
-import Grid from './grid';
+// This page is now handled via dynamic routes ([id].tsx)
+export default function Empty() {
+  return null;
+}
+//   return (
+//     <div>
+//       <Hero />
+//       <Grid />
+//     </div>
+//   );
+// };
 
-const BlogPage = () => {
-  return (
-    <div>
-      <Hero />
-      <Grid />
-    </div>
-  );
-};
-
-export default BlogPage;
+// export default BlogPage;

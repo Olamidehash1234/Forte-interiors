@@ -72,7 +72,7 @@ const Portfolio = () => {
           <div className="h-[300px] w-full lg:h-[398px] lg:mb-[64px] group relative overflow-hidden">
             <video
               ref={videoRefs[3]}
-              src="/videos/about-vid.mp4"
+              src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750942052/PROJECT_ADECO_plwyi6.mp4"
               poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854727/port-img4_glchap.png"
               className="w-full h-full object-cover transition-all duration-300 ease-in-out"
               playsInline
@@ -81,7 +81,7 @@ const Portfolio = () => {
               controls={false}
               preload="metadata"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
+            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
               <h2 className="text-white text-center text-[20px] mb-4 lg:mb-[16px] font-normal">
                 Project ADECO
               </h2>
@@ -109,7 +109,7 @@ const Portfolio = () => {
         <div className="order-3 lg:order-1 h-[300px] w-full lg:w-[40%] lg:h-[655px] group relative overflow-hidden">
           <video
             ref={videoRefs[0]}
-            src="/videos/about-vid.mp4"
+            src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750942185/case-vid_da1ge2.mp4"
             poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854727/port-img1_glp6xq.png"
             className="h-full w-full object-cover transition-all duration-300 ease-in-out"
             playsInline
@@ -125,7 +125,7 @@ const Portfolio = () => {
             {isMuted[0] ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
 
-          <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
+          <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
             <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[16px] font-normal">
               Project Case
             </h2>
@@ -145,7 +145,7 @@ const Portfolio = () => {
           <div className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden">
             <video
               ref={videoRefs[1]}
-              src="/videos/about-vid.mp4"
+              src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750942080/PROJECT_LUXE_adzmmr.mp4"
               poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854725/port-img2_fcmdmw.png"
               className="w-full h-full object-cover transition-all duration-300 ease-in-out"
               playsInline
@@ -173,8 +173,8 @@ const Portfolio = () => {
           <div className="h-[300px] w-full lg:h-[242px] group relative overflow-hidden">
             <video
               ref={videoRefs[2]}
-              src="/videos/about-vid.mp4"
-              poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750854726/port-img3_xr1roh.png"
+              src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750942106/PROJECT_PINNOCK_bzimyy.mp4"
+              poster="https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856944/img6_tum8s9.png"
               className="w-full h-full object-cover transition-all duration-300 ease-in-out"
               playsInline
               loop
@@ -190,7 +190,7 @@ const Portfolio = () => {
             </button>
             <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
               <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
-                Project LUXE
+                Project PINNOCK
               </h2>
               <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
                 VIEW RESIDENTIAL SPACE

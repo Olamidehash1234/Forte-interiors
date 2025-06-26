@@ -46,7 +46,7 @@ const currentImages = images.slice(startIndex, startIndex + imagesPerPage);
             autoPlay
             muted
             loop
-            src="/videos/case-vid.mp4"
+            src="https://res.cloudinary.com/dzwv3fba5/video/upload/v1750866868/case-vid_olwsq2.mp4"
             className="w-full h-full object-cover transition-transform duration-700 ease-out"
           />
         </div>
