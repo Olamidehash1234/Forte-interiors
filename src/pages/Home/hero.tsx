@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getCalApi } from "@calcom/embed-react";
 
 
 const slides = [
@@ -36,6 +37,13 @@ const HeroSection: React.FC = () => {
     return () => clearTimeout(timeout);
   }, [current, isLoaded]);
 
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view", theme: "dark" });
+    })();
+  }, []);
+
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
@@ -68,7 +76,12 @@ const HeroSection: React.FC = () => {
         <p className="mt-6 lg:mt-[30px] text-sm font-medium lg:leading-normal md:text-base max-w-[884px] mx-auto">
           At Fort Interiors, we bring your vision to life through detail-driven design, client-focused service, and expert project delivery – blending creativity with functionality across corporate, residential, and retail spaces.
         </p>
-        <button className="mt-6 lg:mt-[30px] border border-white px-6 py-2 text-sm uppercase tracking-wide hover:bg-black hover:text-white hover:border-none transition">
+        <button
+          data-cal-namespace="30min"
+          data-cal-link="fortinteriors/30min"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
+          className="mt-6 lg:mt-[30px] border border-white px-6 py-2 text-sm uppercase tracking-wide hover:bg-black hover:text-white hover:border-none transition"
+        >
           Book a Consultation
         </button>
       </div>

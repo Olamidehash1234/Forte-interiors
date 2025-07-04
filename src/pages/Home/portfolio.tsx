@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const videoRefs = [
@@ -90,9 +91,11 @@ const Portfolio = () => {
                 acoustic paneling, ergonomic furniture, and custom glass
                 partitions.
               </p>
-              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-                VIEW OFFICE SPACE
-              </button>
+              <Link to="/project-case/project-adeco">
+                <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                  VIEW OFFICE SPACE
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -133,9 +136,11 @@ const Portfolio = () => {
               A modern yet cozy family home in Ikoyi featuring warm wood tones,
               open floor plans, and customized wardrobe fittings.
             </p>
-            <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-              VIEW RESIDENTIAL SPACE
-            </button>
+            <Link to="/project-case/project-case">
+              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                VIEW RESIDENTIAL SPACE
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -164,9 +169,11 @@ const Portfolio = () => {
               <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
                 Project LUXE
               </h2>
-              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-                VIEW RESIDENTIAL SPACE
-              </button>
+              <Link to="/project-case/project-luxe">
+                <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                  VIEW RESIDENTIAL SPACE
+                </button>
+              </Link>
             </div>
           </div>
           {/* Third Video */}
@@ -192,9 +199,11 @@ const Portfolio = () => {
               <h2 className="text-white text-center text-[24px] mb-4 lg:mb-[24px] font-normal">
                 Project PINNOCK
               </h2>
-              <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
-                VIEW RESIDENTIAL SPACE
-              </button>
+              <Link to="/project-case/project-pinnock">
+                <button className="border border-white text-white px-[14px] py-[10px] bg-transparent hover:bg-[#000] text-[12px] hover:text-[#FFF] hover:border-none inline-block transition-colors duration-200">
+                  VIEW RESIDENTIAL SPACE
+                </button>
+              </Link>
             </div>
           </div>
         </div>

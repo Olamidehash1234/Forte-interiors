@@ -58,7 +58,7 @@ const ContactInfo: React.FC = () => {
         </div>
 
         <div className="hidden lg:block h-auto w-auto">
-          <img src="/public/icons/contact/call.svg" alt="" />
+          <img src="/icons/contact/call.svg" alt="call button" />
         </div>
       </div>
     </div>

@@ -31,7 +31,8 @@ const ProjectCase: React.FC<ProjectCaseProps> = ({ project }) => {
               />
             </div>
           )}
-          {project.video && (
+          {/* Show video if available, otherwise show second image if exists */}
+          {project.video ? (
             <div className="w-full lg:w-[35%] h-[520px]">
               <video
                 autoPlay
@@ -41,14 +42,30 @@ const ProjectCase: React.FC<ProjectCaseProps> = ({ project }) => {
                 className="w-full h-full object-cover transition-transform duration-700 ease-out"
               />
             </div>
+          ) : (
+            project.images[1] && (
+              <div className="w-full lg:w-[35%] h-[520px] overflow-hidden">
+                <img
+                  src={project.images[1]}
+                  alt={project.title + " secondary"}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                />
+              </div>
+            )
           )}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[20px]">
-          {project.images.slice(1).map((img, idx) => (
-            <div key={img + idx} className="w-full h-[300px] lg:h-[413px]">
-              <img src={img} alt="" className="h-full object-cover w-full" />
-            </div>
-          ))}
+          {project.video
+            ? project.images.slice(1).map((img, idx) => (
+                <div key={img + idx} className="w-full h-[300px] lg:h-[413px]">
+                  <img src={img} alt="" className="h-full object-cover w-full" />
+                </div>
+              ))
+            : project.images.slice(2).map((img, idx) => (
+                <div key={img + idx} className="w-full h-[300px] lg:h-[413px]">
+                  <img src={img} alt="" className="h-full object-cover w-full" />
+                </div>
+              ))}
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const galleryItems = [
     title: "Project Case",
     desc: "A modern yet cozy family home in Ikoyi featuring warm wood tones, open floor plans, and customized wardrobe fittings.",
     button: "VIEW RESIDENTIAL SPACE",
-    id: "1",
+    id: "project-case",
     layout: { row: 1, col: 1 },
   },
   {
@@ -22,7 +22,7 @@ const galleryItems = [
     category: "RESIDENTIAL",
     title: "Project LUXE",
     button: "VIEW RESIDENTIAL SPACE",
-    id: "2",
+    id: "project-luxe",
     layout: { row: 1, col: 2, sub: 1 },
   },
   {
@@ -33,7 +33,7 @@ const galleryItems = [
     title: "Project ADECO",
     desc: "We transformed an open-plan layout into a sleek workspace with acoustic paneling, ergonomic furniture, and custom glass partitions.",
     button: "VIEW OFFICE SPACE",
-    id: "3",
+    id: "project-adeco",
     layout: { row: 1, col: 2, sub: 2 },
   },
   {
@@ -44,7 +44,7 @@ const galleryItems = [
     title: "Project MICHDAN",
     desc: "We transformed an open-plan layout into a sleek workspace with acoustic paneling, ergonomic furniture, and custom glass partitions.",
     button: "VIEW RESIDENTIAL SPACE",
-    id: "4",
+    id: "project-michdan",
     layout: { row: 1, col: 3, sub: 1 },
   },
   {
@@ -53,7 +53,7 @@ const galleryItems = [
     poster: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856947/img5_roejjm.png",
     category: "RESIDENTIAL",
     title: "Project TROPICAL LUSH",
-    id: "5",
+    id: "project-tropical-lush",
     button: "VIEW RESIDENTIAL SPACE",
     layout: { row: 1, col: 3, sub: 2 },
   },
@@ -65,7 +65,7 @@ const galleryItems = [
     title: "Project PINNOCK",
     desc: "We transformed an open-plan layout into a sleek workspace with acoustic paneling, ergonomic furniture, and custom glass partitions.",
     button: "VIEW RESIDENTIAL SPACE",
-    id: "6",
+    id: "project-pinnock",
     layout: { row: 2, col: 1, sub: 1 },
   },
   {
@@ -74,7 +74,7 @@ const galleryItems = [
     poster: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856934/img7_jdd8bl.png",
     category: "RESIDENTIAL",
     title: "Project MO",
-    id: "7",
+    id: "project-mo",
     button: "VIEW RESIDENTIAL SPACE",
     layout: { row: 2, col: 1, sub: 2 },
   },
@@ -84,7 +84,7 @@ const galleryItems = [
     poster: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856945/img8_l02bxp.png",
     category: "RETAIL",
     title: "Project LK",
-    id: "8",
+    id: "project-lk",
     button: "VIEW RESIDENTIAL SPACE",
     layout: { row: 2, col: 2, sub: 1 },
   },
@@ -94,7 +94,7 @@ const galleryItems = [
     poster: "https://res.cloudinary.com/dzwv3fba5/image/upload/v1750856937/img9_xmxopl.png",
     category: "RETAIL",
     title: "Project HYDE PARK",
-    id: "9",
+    id: "project-hyde-park",
     button: "VIEW COMMERCIAL SPACE",
     layout: { row: 2, col: 2, sub: 2 },
   },
@@ -106,7 +106,7 @@ const galleryItems = [
     title: "Project DE",
     desc: "A modern yet cozy family home in Ikoyi featuring warm wood tones, open floor plans, and customized wardrobe fittings.",
     button: "VIEW RESIDENTIAL SPACE",
-    id: "10",
+    id: "project-de",
     layout: { row: 2, col: 3 },
   },
 ];
@@ -169,8 +169,11 @@ const PortfolioGallery = () => {
   };
 
   useEffect(() => {
-    videoRefs.forEach((ref) => {
-      const video = ref.current;
+    // Attach hover play/pause to all videos that have a src (i.e., are rendered)
+    const cleanups: (() => void)[] = [];
+    galleryItems.forEach((item, idx) => {
+      if (!item.src) return;
+      const video = videoRefs[idx].current;
       if (!video) return;
 
       const play = () => {
@@ -182,7 +185,6 @@ const PortfolioGallery = () => {
       const pause = () => {
         video.pause();
         video.currentTime = 0;
-
         const originalSrc = video.src;
         video.src = "";
         video.load();
@@ -193,12 +195,16 @@ const PortfolioGallery = () => {
       parent?.addEventListener("mouseenter", play);
       parent?.addEventListener("mouseleave", pause);
 
-      return () => {
+      cleanups.push(() => {
         parent?.removeEventListener("mouseenter", play);
         parent?.removeEventListener("mouseleave", pause);
-      };
+      });
     });
-  }, [isMuted]);
+
+    return () => {
+      cleanups.forEach((fn) => fn());
+    };
+  }, [isMuted, activeTab]);
 
   // Filter items by tab
   const filteredItems =
@@ -208,7 +214,7 @@ const PortfolioGallery = () => {
 
   // Helper to render overlay
   const renderOverlay = (item: GalleryItem) => (
-    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
+    <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col items-center justify-center z-10">
       <h2
         className={`text-white text-center ${
           item.desc ? "text-[20px]" : "text-[24px]"

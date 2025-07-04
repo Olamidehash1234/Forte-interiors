@@ -1,4 +1,13 @@
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+
 const ConsultationHero = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
   return (
     <section className="w-full py-[40px] px-[16px] lg:py-[60px] lg:px-[80px] bg-white">
       <div className="">
@@ -28,6 +37,9 @@ const ConsultationHero = () => {
                 YOUR NEXT PROJECT
               </h2>
               <button
+                data-cal-namespace="30min"
+                data-cal-link="fortinteriors/30min"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'
                 className="border border-white text-white px-6 py-2 rounded-none text-base font-normal transition-colors duration-200 hover:bg-white hover:text-[#3B241E]"
               >
                 Book a Consultation
