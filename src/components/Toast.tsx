@@ -12,7 +12,7 @@ const Toast: React.FC<ToastProps> = ({ message, type, show, onHide }) => {
     if (show) {
       const timer = setTimeout(() => {
         onHide();
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [show, onHide]);
@@ -46,20 +46,31 @@ const Toast: React.FC<ToastProps> = ({ message, type, show, onHide }) => {
   const getBgColor = () => {
     switch (type) {
       case 'success':
-        return 'bg-[#040323]';
+        return 'bg-[#3B241E]';
       case 'error':
         return 'bg-red-500';
       case 'loading':
-        return 'bg-[#040323]';
+        return 'bg-[#3B241E]';
     }
   };
 
   return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+    <div className="fixed top-4 right-4 z-50">
       <div className={`${getBgColor()} text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 min-w-[300px] justify-center transition-all duration-300 ease-in-out`}>
         <span className="flex-shrink-0">{getIcon()}</span>
         <p className="text-sm font-medium">{message}</p>
       </div>
+      {(type === 'success' || type === 'error') && (
+        <div className="h-1 w-full bg-white/30 rounded-b-lg overflow-hidden">
+          <div className="h-full bg-[#FCF9F5]" style={{ width: '100%', animation: 'toast-progress 5s linear forwards' }}></div>
+        </div>
+      )}
+      <style>{`
+        @keyframes toast-progress {
+          from { width: 100%; }
+          to { width: 0%; }
+        }
+      `}</style>
     </div>
   );
 };
